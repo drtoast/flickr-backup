@@ -1,0 +1,9 @@
+{
+  "api_key": "abc123",
+  "api_secret": "def456",
+  "user_id": "74504321@N00",
+  "archive_path": "/tmp/flickr",
+  "auth_token": null,
+  "overwrite": false,
+  "rate_limit": false
+}
