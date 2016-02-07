@@ -1,6 +1,6 @@
 # Flickr Backup
 
-This is a simple command line utility to maintain a local archive of your Flickr photosets, photos, and JSON metadata. Run it periodically to incrementally add any new photos or sets you've added.
+This is a simple Ruby command line utility to maintain a local archive of your Flickr photosets, photos, and JSON metadata. Run it periodically to incrementally add any new photos or sets you've added.
 
 Photos and data will be saved in a hierarchy structured like this:
 
@@ -40,9 +40,14 @@ Pagination is not handled yet, so if you have any sets with more than 500 photos
 * Ruby 2.2
 * Minitest (for development)
 
-## Setup
+## Installation
 
-1. Copy `config.example.json` to `config.json`.
+1. `git clone git@github.com:drtoast/flickr-backup.git`
+2. `gem install minitest` (for development only)
+
+## Configuration
+
+1. Copy `config.example.json` to `config.json`, and edit as follows.
 2. Add your own `user_id`. You can look it up based on your username [here](https://www.flickr.com/services/api/explore/?method=flickr.people.findByUsername).
 3. Add your own `api_key` and `api_secret`. You can get them  [here](https://www.flickr.com/services/apps/create/apply/?).
 4. Add your `archive_path`. This is the full path to wherever you want to store your photos and data.
