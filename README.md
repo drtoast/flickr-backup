@@ -22,7 +22,7 @@ where:
 
   * `photosets.json` is the list of all your photosets
   * `photosets` is a directory containing one subdirectory per photoset
-  * `72057594049050524` is a subdirectory containing one photoset
+  * `72157629556799377` is a subdirectory containing one photoset
   * `photoset.json` contains metadata about one photoset
   * `photos.json` contains an index of the photos in that photoset
   * `6970875833` is a subdirectory containing one photo
