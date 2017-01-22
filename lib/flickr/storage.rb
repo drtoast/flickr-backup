@@ -43,8 +43,16 @@ module Flickr
       File.join(photoset_path(set_id), 'photos', photo_id)
     end
 
+    def thumbnail_path(photo_id, set_id)
+      File.join(photoset_path(set_id), 'thumbnails')
+    end
+
     def photo_image_path(photo_id, set_id, originalformat)
       File.join(photo_path(photo_id, set_id), "#{photo_id}.#{originalformat}")
+    end
+
+    def thumbnail_image_path(photo_id, set_id)
+      File.join(thumbnail_path(photo_id, set_id), "#{photo_id}.jpg")
     end
 
     def photo_info_json_path(photo_id, set_id)
@@ -123,6 +131,10 @@ module Flickr
       data = load_photo_info(photo_id, set_id)
       originalformat = data['photo']['originalformat']
       exists? photo_image_path(photo_id, set_id, originalformat)
+    end
+
+    def thumbnail_exists?(photo_id, set_id)
+      exists? thumbnail_image_path(photo_id, set_id)
     end
   end
 end
