@@ -9,6 +9,11 @@ module Flickr
     end
 
     def summary
+      if ! File.directory?(storage.photosets_path)
+        STDERR.puts "Before running a report, you must download photosets to #{storage.photosets_path} by running `ruby backup.rb`.\n\nExiting..."
+        exit 1
+      end
+
       storage.load_photosets['photosets']['photoset'].each do |photoset|
         set_id = photoset['id']
         set_title = photoset['title']['_content']
