@@ -33,7 +33,7 @@ module Flickr
     end
 
     def get_desktop_auth_link(frob)
-      params = { api_key: DESKTOP_API_KEY, perms: 'read', frob: frob }
+      params = { api_key: @api_key, perms: 'read', frob: frob }
       params[:api_sig] = make_api_sig(params.dup)
       SITE_AUTH + "?" + hash_to_query(params)
     end
