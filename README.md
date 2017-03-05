@@ -2,6 +2,8 @@
 
 This is a simple Ruby command line utility to maintain a local archive of your Flickr photosets, photos, and JSON metadata. Run it periodically to incrementally add any new photos or sets you've added.
 
+**This will not download photos that are not in a photoset, but [the batch-edit page](https://www.flickr.com/photos/organize/) makes it easy to add all those photos into their own photoset.**
+
 Photos and data will be saved in a hierarchy structured like this:
 
 ```

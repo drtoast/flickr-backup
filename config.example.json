@@ -1,7 +1,7 @@
 {
   "api_key": "abc123",
   "api_secret": "def456",
-  "user_id": "24662369@N07",
+  "user_id": "bogusvalue@N07",
   "archive_path": "/Users/drtoast/Photos/flickr",
   "auth_token": null,
   "overwrite": false,

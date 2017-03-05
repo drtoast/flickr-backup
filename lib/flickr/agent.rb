@@ -19,9 +19,9 @@ module Flickr
       frob = client.get_frob
       puts "Visit this URL and then press return:"
       puts client.get_desktop_auth_link(frob)
-      gets
+      STDIN.gets
       token = client.get_token(frob)
-      puts %q(Add to config.json: "auth_token": "#{token}")
+      puts %Q(Add to config.json: "auth_token": "#{token}")
     end
 
     def fetch_photosets
